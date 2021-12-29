@@ -471,7 +471,7 @@ class MyGame:
     def main_loop(self):
         while True:
             self.timePassed = self.timePassed + clock.tick()
-            if self.timePassed > 1500+randrange(-500, 500):
+            if self.timePassed > 1500+randrange(-500, 250):
                 self.enemy_move()
                 self.timePassed = 0
             self.check_events()
@@ -633,6 +633,7 @@ class MyGame:
             self.draw_npc_dialog(self.map[player_new_y][player_new_x])
             if self.map[player_new_y][player_new_x] in ["6"]:
                 return
+            return
 
         # Open the goal tile
         if len(self.find_enemy()) == 0 and self.passed == False:
