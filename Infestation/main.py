@@ -325,7 +325,7 @@ class MyGame:
         if npc=="4":
             pygame.draw.rect(self.window, (white), (100,50, self.window_width-200, 130))
             pygame.draw.rect(self.window, (black), (100,50, self.window_width-200, 130), 2)
-            self.window.blit(self.text_format("You", font, 20, black), (120, 70))
+            self.window.blit(self.text_format("You:", font, 20, black), (120, 70))
             self.window.blit(self.text_format("Why is there a diary down here? and the ink", font, 18, gray), (120, 100))
             self.window.blit(self.text_format("is still fresh...but this language...is", font, 18, gray), (120, 120))
             self.window.blit(self.text_format("something I've never seen before...", font, 18, gray), (120, 140))
@@ -632,7 +632,7 @@ class MyGame:
         if self.map[player_new_y][player_new_x] in self.npc.keys():
             self.draw_npc_dialog(self.map[player_new_y][player_new_x])
             if self.map[player_new_y][player_new_x] in ["6"]:
-            return
+                return
 
         # Open the goal tile
         if len(self.find_enemy()) == 0 and self.passed == False:
