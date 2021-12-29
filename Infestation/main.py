@@ -632,7 +632,6 @@ class MyGame:
         if self.map[player_new_y][player_new_x] in self.npc.keys():
             self.draw_npc_dialog(self.map[player_new_y][player_new_x])
             if self.map[player_new_y][player_new_x] in ["6"]:
-                pygame.quit()
             return
 
         # Open the goal tile
