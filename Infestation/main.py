@@ -471,7 +471,7 @@ class MyGame:
     def main_loop(self):
         while True:
             self.timePassed = self.timePassed + clock.tick()
-            if self.timePassed > 1500:
+            if self.timePassed > 1500+randrange(-500, 500):
                 self.enemy_move()
                 self.timePassed = 0
             self.check_events()
